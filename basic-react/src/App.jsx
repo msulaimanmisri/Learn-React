@@ -1,6 +1,6 @@
 import Header from "./components/Header.jsx";
 import Hero from "./components/Hero.jsx";
-import ListOfSkills from "./components/ListOfSkills.jsx";
+import Skills from "./components/Skills.jsx";
 import Footer from "./components/Footer.jsx";
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
     <>
       <Header />
       <Hero />
-      <ListOfSkills />
+      <Skills />
       <Footer />
     </>
   );

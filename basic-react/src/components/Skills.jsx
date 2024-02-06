@@ -1,5 +1,5 @@
-function ListOfSkills() {
-  const skills = ["php", "laravel", "vue"];
+function Skills() {
+  const skills = ["PHP", "laravel", "Vue"];
 
   return (
     <div className="container mt-5">
@@ -8,7 +8,7 @@ function ListOfSkills() {
         {skills.map((skill) => (
           <div className="col">
             <div className="card card-body">
-              <span className="form-text">{skill}</span>
+              <span className="form-text">{skill.toUpperCase()}</span>
             </div>
           </div>
         ))}
@@ -17,4 +17,4 @@ function ListOfSkills() {
   );
 }
 
-export default ListOfSkills;
+export default Skills;
