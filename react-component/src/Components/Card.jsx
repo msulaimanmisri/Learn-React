@@ -1,4 +1,6 @@
-function Card() {
+import React from "react";
+
+function Card({ searchTerm }) {
   var teams = [
     {
       name: "Sulaiman",
@@ -32,25 +34,25 @@ function Card() {
     },
   ];
 
+  // Filter teams based on search term
+  const filteredTeams = teams.filter(
+    (team) =>
+      team.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      team.position.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
   return (
     <>
-      <div className="container my-5">
-        <div className="my-4">
-          <h1 className="display-3">
-            AsiaQuest <span className="fw-bold">Malaysia</span>
-          </h1>
-          <span className="lead">Engineering Team</span>
-        </div>
-
+      <div className="container my-4">
         <div className="row">
-          {teams.map((team) => (
-            <div className="col-4 mb-4">
+          {filteredTeams.map((team, index) => (
+            <div className="col-4 mb-4" key={index}>
               <div className="card card-body rounded-4 border-0 shadow-sm p-4">
                 <img
                   src={team.default_image}
-                  className="img-fluid rounded-circle mb-3"
-                  alt=""
-                  width="100"
+                  alt={team.name}
+                  className="rounded-circle mb-3"
+                  width={150}
                 />
                 <h3>{team.name}</h3>
                 <span>{team.position}</span>
