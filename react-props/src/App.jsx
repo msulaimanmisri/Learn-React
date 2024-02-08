@@ -9,9 +9,10 @@ function App() {
   return (
     <>
       <div className="container my-5">
-        <Card name="Sulaiman" salary="RM 142,000" isPermenant={true} />
-        <Card name="Akhimullah" salary="RM 39,000" isPermenant={true} />
-        <Card name="Ikhwan" salary="RM 60,000" isPermenant={false} />
+        <Card name="Sulaiman" salary={1500} isPermenant={true} />
+        <Card name="Akhimullah" salary={3000} isPermenant={true} />
+        <Card name="Ikhwan" salary={3000} isPermenant={false} />
+        <Card />
       </div>
     </>
   );
